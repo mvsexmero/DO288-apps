@@ -12,6 +12,7 @@ config_s2i
 
 echo "---> Installing application source"
 cp -Rf /tmp/src/*.html ./
+cp -Rf ./ /tmp
 
 DATE=`date "+%b %d, %Y @ %H:%M %p"`
 
@@ -19,6 +20,7 @@ echo "---> Creating info page"
 echo "Page built on $DATE" >> ./info.html
 echo "Page built on $(date "+%Y-%m-%d") by Victoria Sexmero Martín" >> ./info.html
 echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
+echo " La fecha actual es $(date "+%Y-%m-%d")" >>./info.html
 
 ######## CUSTOMIZATION ENDS HERE ############
 
