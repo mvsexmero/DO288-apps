@@ -19,8 +19,8 @@ echo "---> Creating info page"
 echo "Page built on $DATE" >> ./info.html
 echo "Page built on $(date "+%Y-%m-%d") by Victoria Sexmero Martín" >> ./info.html
 echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
-
-######## CUSTOMIZATION ENDS HERE ############
+echo "Let´ go to write the date $(date "+%d-%m-%Y") " >> ./info.html
+###### CUSTOMIZATION ENDS HERE ############
 
 if [ -d ./httpd-cfg ]; then
   echo "---> Copying httpd configuration files..."
