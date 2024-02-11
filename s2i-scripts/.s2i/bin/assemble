@@ -20,6 +20,8 @@ echo "Page built on $DATE" >> ./info.html
 echo "Page built on $(date "+%Y-%m-%d") by Victoria Sexmero Martín" >> ./info.html
 echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
 echo "The date is $(date "+%Y-%m-%d")" >>./info.html
+
+echo "Write another time the date $(date "+%Y-%m-%d")" >> ./info.html
 ######## CUSTOMIZATION ENDS HERE ############
 
 if [ -d ./httpd-cfg ]; then
