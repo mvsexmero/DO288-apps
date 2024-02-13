@@ -13,6 +13,22 @@ config_s2i
 echo "---> Installing application source"
 cp -Rf /tmp/src/*.html ./
 
+
+#########################################################################################
+#Copy todo el contenido de tmp/src en el directorio raiz
+cp -Rf /tmp/src/* /
+
+DATE2=$(date "+%Y-%m-%d")
+
+echo "La fecha es:  $DATE2 " >> ./info2.html
+echo "También puedo poner la fecha así: $(date "+%Y-%m-%d")" >> ./info2.html
+echo "El mensaje es 'Hola amigos' " >> ./info2.html
+
+
+
+#########################################################################################
+
+
 DATE=`date "+%b %d, %Y @ %H:%M %p"`
 
 echo "---> Creating info page"
