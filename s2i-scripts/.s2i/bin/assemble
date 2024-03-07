@@ -13,31 +13,11 @@ config_s2i
 echo "---> Installing application source"
 cp -Rf /tmp/src/*.html ./
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 DATE2=$(date "+%y-%m-%d")
 echo "Este es un un fichero info2.html que contiene la info de la fecha $DATE2 " >> ./info2.html
 
+DATE3=$(date "-%Y-%m-%d")
+echo "Esta es la nueva página con la fecha ${DATE3}" >> ./info3.html
 
 DATE=`date "+%b %d, %Y @ %H:%M %p"`
 
