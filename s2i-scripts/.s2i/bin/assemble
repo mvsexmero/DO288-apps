@@ -16,7 +16,7 @@ cp -Rf /tmp/src/*.html ./
 DATE1=$(date "+%Y-%m-%d")
 echo "This is a message into info1.html an the date is $DATE " >> ./info1.html
 
-DATE2=$(date "+%y-%m-%d")
+DATE2=$(date "+%Y-%m-%d")
 echo "Este es un un fichero info2.html que contiene la info de la fecha $DATE2 " >> ./info2.html
 
 DATE3=$(date "-%Y-%m-%d")
