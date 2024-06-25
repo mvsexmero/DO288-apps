@@ -1,0 +1,29 @@
+#!/bin/bash -e
+#
+# S2I assemble script for the 's2i-do288-go' image.
+# The 'assemble' script builds your application source so that it is ready to run.
+#
+# For more information refer to the documentation:
+#	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
+#
+
+if [[ "$1" == "-h" ]]; then
+	# If the 's2i-do288-go' assemble script is executed with '-h' flag,
+	# print the usage.
+	exec /usr/libexec/s2i/usage
+fi
+
+echo "---> Installing application source..."
+cp -Rf /tmp/src/. /opt/app-root/
+
+echo "------------Traza------------"
+DATE=$(date "+%Y-%m-%d")
+
+echo "Esta es una traza que muestra la fecha $DATE"
+echo "Esta es la instrucción cp -Rf /tmp/src/*.html ./"
+echo "Esta es la traza >> ./info.html"
+echo "--------Fin de la Traza------"
+
+
+echo "---> Building application from source..."
+go build app.go
